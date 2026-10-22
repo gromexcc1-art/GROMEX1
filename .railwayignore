@@ -1,0 +1,9 @@
+.git/
+.railway/
+node_modules/
+data/
+tests/
+*.db
+*.db-shm
+*.db-wal
+*.bak

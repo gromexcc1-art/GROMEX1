@@ -1,0 +1,18 @@
+{
+  "name": "cc-gromex-sistema-integral",
+  "version": "6.34.0",
+  "private": true,
+  "type": "module",
+  "description": "Sistema web de cotizaciones, inventario y producción de CC GROMEX con SQLite.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "node scripts/start-railway.js",
+    "dev": "node --watch server.js",
+    "check": "node --check server.js && node --check server/database.js && node --check server/quotation-rules.js && node --check server/role-permissions.js && node --check server/schema-maintenance.js && node --check app.js && node --check scripts/inspeccionar-base.js && node --check scripts/cargar-catalogo-blocks.js && node --check server/warehouse-inventory.js && node --check js/core/transfers.js && node --check server/sale-deliveries.js && node --check js/core/deliveries.js && node --check js/core/delivery-summary.js && node --check js/core/quotations.js && node --check js/core/motion.js && node --check js/core/ui.js && node --check server/monthly-audit.js && node --check server/client-types.js && node --check js/core/monthly-audit.js && node --check server/month-end.js && node --check js/core/month-end.js && node --check js/core/month-end-document.js && node --check js/core/sidebar.js && node --check js/core/expenses.js && node --check js/core/icons.js && node --check js/core/theme.js && node --check js/theme-init.js && node --check js/core/stock-alerts.js && node --check server/stock-alerts.js && node --check js/core/report-document.js && node --check js/core/excel-reports.js && node --check server/variable-costs.js && node --check server/production-valuation.js && node --check js/core/variable-costs.js && node --check js/core/variable-cost-ui.js && node --check server/operating-ledger.js && node --check js/core/operations-ui.js && node --check js/core/product-calculator.js && node --check js/core/navigation.js && node --check js/core/numeric-inputs.js && node --check js/core/preference-model.js && node --check js/core/view-personalization.js && node --check server/view-preferences.js",
+    "db:inspeccionar": "node scripts/inspeccionar-base.js",
+    "catalogo:blocks": "node scripts/cargar-catalogo-blocks.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
